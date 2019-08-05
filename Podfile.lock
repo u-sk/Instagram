@@ -1,4 +1,22 @@
 PODS:
+  - CLImageEditor/AllTools (0.2.3):
+    - CLImageEditor/Core
+    - CLImageEditor/EmoticonTool
+    - CLImageEditor/ResizeTool
+    - CLImageEditor/SplashTool
+    - CLImageEditor/StickerTool
+    - CLImageEditor/TextTool
+  - CLImageEditor/Core (0.2.3)
+  - CLImageEditor/EmoticonTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/ResizeTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/SplashTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/StickerTool (0.2.3):
+    - CLImageEditor/Core
+  - CLImageEditor/TextTool (0.2.3):
+    - CLImageEditor/Core
   - ESTabBarController (0.2)
   - Firebase (6.1.0):
     - Firebase/Core (= 6.1.0)
@@ -74,6 +92,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - CLImageEditor/AllTools (= 0.2.3)
   - ESTabBarController (= 0.2)
   - Firebase (= 6.1.0)
   - Firebase/Auth
@@ -83,6 +102,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CLImageEditor
     - ESTabBarController
     - Firebase
     - FirebaseAnalytics
@@ -99,6 +119,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  CLImageEditor: 8e50fa16d9230d5d4677a006bb2a2912079a17d8
   ESTabBarController: e82ac0b135bec16fb646ac1da4ac8953fcd927da
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
   FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
@@ -114,6 +135,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 73a869b86a4db64fb97275bffbdd4eb8a062eb0c
+PODFILE CHECKSUM: 4828d9dcde107637622190fd1faef3e910f3133b
 
 COCOAPODS: 1.7.4

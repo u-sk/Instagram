@@ -47,7 +47,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ot3-Ud-2dP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og4-7b-YLa">
+                                <rect key="frame" x="57" y="124" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="P4t-dI-zBy"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="2r2-42-Jfc" eventType="touchUpInside" id="Ggf-A7-99N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-GL-Sd1">
+                                <rect key="frame" x="57" y="174" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="lui-UA-qZ1"/>
+                                </constraints>
+                                <state key="normal" title="カメラ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="2r2-42-Jfc" eventType="touchUpInside" id="khR-H8-CWE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X5-uz-ZD4">
+                                <rect key="frame" x="57" y="224" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vvF-N2-3lT"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="2r2-42-Jfc" eventType="touchUpInside" id="wi5-iP-lmj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UuK-GL-Sd1" firstAttribute="top" secondItem="og4-7b-YLa" secondAttribute="bottom" constant="10" id="3CU-cE-0Vl"/>
+                            <constraint firstItem="og4-7b-YLa" firstAttribute="centerX" secondItem="Ot3-Ud-2dP" secondAttribute="centerX" id="J0E-Oh-r65"/>
+                            <constraint firstItem="3X5-uz-ZD4" firstAttribute="centerX" secondItem="Ot3-Ud-2dP" secondAttribute="centerX" id="VRp-YD-T5X"/>
+                            <constraint firstItem="3X5-uz-ZD4" firstAttribute="top" secondItem="UuK-GL-Sd1" secondAttribute="bottom" constant="10" id="swf-jw-bVt"/>
+                            <constraint firstItem="og4-7b-YLa" firstAttribute="top" secondItem="8tm-z4-KpG" secondAttribute="top" constant="80" id="uZB-U7-VDI"/>
+                            <constraint firstItem="UuK-GL-Sd1" firstAttribute="centerX" secondItem="Ot3-Ud-2dP" secondAttribute="centerX" id="wJK-5a-iIj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8tm-z4-KpG"/>
                     </view>
                 </viewController>
