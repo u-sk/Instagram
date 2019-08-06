@@ -22,6 +22,7 @@ class PostTableViewCell: UITableViewCell {
     //  コメント作成ボタンを押した時
     @IBAction func commentButton(_ sender: Any) {
 //        let commentViewController = self.storyboard
+        
     }
 
     
