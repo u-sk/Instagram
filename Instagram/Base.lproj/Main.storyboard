@@ -118,41 +118,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="コメント作成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f15-T8-Sax">
-                                <rect key="frame" x="57" y="168" width="104" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント作成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f15-T8-Sax">
+                                <rect key="frame" x="57" y="124" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A0Y-vi-2ov">
-                                <rect key="frame" x="57" y="218" width="300" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzi-XC-IB5">
+                                <rect key="frame" x="57" y="195" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="BXf-st-BOa"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzi-XC-IB5">
-                                <rect key="frame" x="57" y="378" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="MEr-XJ-NZ2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Ym4-EQ-wwZ"/>
                                 </constraints>
                                 <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="postCommentButton:" destination="w01-wQ-NJ4" eventType="touchUpInside" id="GN3-ff-Xbz"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-Iy-q0Z">
+                                <rect key="frame" x="57" y="245" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3Jq-7t-JQp"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="cancelCommentButtom:" destination="w01-wQ-NJ4" eventType="touchUpInside" id="adR-DQ-IZE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを記入してください！！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFj-kK-dHY">
+                                <rect key="frame" x="57" y="155" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="xZE-Kf-pJ0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="A0Y-vi-2ov" firstAttribute="top" secondItem="f15-T8-Sax" secondAttribute="bottom" constant="10" id="1T1-Rx-o3a"/>
-                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="leading" secondItem="f15-T8-Sax" secondAttribute="leading" id="2QG-PV-gWs"/>
-                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="top" secondItem="A0Y-vi-2ov" secondAttribute="bottom" constant="10" id="LMb-Nm-Ntw"/>
-                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="centerX" secondItem="45J-q8-5tH" secondAttribute="centerX" id="fd0-2J-fS6"/>
-                            <constraint firstItem="A0Y-vi-2ov" firstAttribute="leading" secondItem="f15-T8-Sax" secondAttribute="leading" id="m1g-PA-D4Q"/>
-                            <constraint firstItem="A0Y-vi-2ov" firstAttribute="centerX" secondItem="45J-q8-5tH" secondAttribute="centerX" id="sHH-1Y-zJO"/>
+                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="top" secondItem="yFj-kK-dHY" secondAttribute="bottom" constant="10" id="128-zL-eRG"/>
+                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="centerX" secondItem="45J-q8-5tH" secondAttribute="centerX" id="1OY-2u-1mY"/>
+                            <constraint firstItem="yFj-kK-dHY" firstAttribute="top" secondItem="f15-T8-Sax" secondAttribute="bottom" constant="10" id="1q6-q6-XhL"/>
+                            <constraint firstItem="f15-T8-Sax" firstAttribute="top" secondItem="bk0-Bj-vJF" secondAttribute="top" constant="80" id="AV8-Yq-MiN"/>
+                            <constraint firstItem="gi4-Iy-q0Z" firstAttribute="top" secondItem="Qzi-XC-IB5" secondAttribute="bottom" constant="10" id="BgM-tp-8OC"/>
+                            <constraint firstItem="gi4-Iy-q0Z" firstAttribute="leading" secondItem="f15-T8-Sax" secondAttribute="leading" id="E7k-hk-zhD"/>
+                            <constraint firstItem="yFj-kK-dHY" firstAttribute="leading" secondItem="f15-T8-Sax" secondAttribute="leading" id="Tfb-Eb-hfy"/>
+                            <constraint firstItem="gi4-Iy-q0Z" firstAttribute="centerX" secondItem="45J-q8-5tH" secondAttribute="centerX" id="Zbf-NH-BCN"/>
+                            <constraint firstItem="yFj-kK-dHY" firstAttribute="centerX" secondItem="45J-q8-5tH" secondAttribute="centerX" id="e9u-C5-cko"/>
+                            <constraint firstItem="Qzi-XC-IB5" firstAttribute="leading" secondItem="f15-T8-Sax" secondAttribute="leading" id="tLv-bJ-iEv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bk0-Bj-vJF"/>
                     </view>
+                    <connections>
+                        <outlet property="editCommentTextField" destination="yFj-kK-dHY" id="QZQ-2m-wzE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGd-Ri-cjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

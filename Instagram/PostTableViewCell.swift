@@ -15,15 +15,14 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    // コメントした人の名前
     @IBOutlet weak var commentPICLabel: UILabel!
     
-    @IBOutlet weak var commentTextView: UITextView!
+    // 作成されたコメント
+    @IBOutlet weak var commentLabel: UILabel!
     
-    //  コメント作成ボタンを押した時
-    @IBAction func commentButton(_ sender: Any) {
-//        let commentViewController = self.storyboard
-        
-    }
+    //  コメント作成ボタン
+    @IBOutlet weak var makeCommentButton: UIButton!
 
     
     override func awakeFromNib() {
@@ -55,7 +54,7 @@ class PostTableViewCell: UITableViewCell {
         
         // コメント作成者ラベル・コメント記入テキストフィールド追加
         self.commentPICLabel.text = "<\(postData.name!)さんのコメント＞"
-        self.commentTextView.text = postData.comment
+        self.commentLabel.text = postData.comment
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
