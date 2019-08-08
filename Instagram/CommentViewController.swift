@@ -18,18 +18,21 @@ class CommentViewController: UIViewController {
     @IBAction func postCommentButton(_ sender: Any) {
         print(editCommentTextField.text!)
         
-         // editCommentTextFieldからテキストを取得する
+        // editCommentTextFieldからテキストを取得する
         let comment = editCommentTextField.text
         
         // 辞書を作成してFirebaseに保存する
         let postRef = Database.database().reference().child(Const.PostPath)
-        let postCommentDic = ["comment": comment ]
+        let postCommentDic = ["comments": comment ]
         postRef.childByAutoId().setValue(postCommentDic)
+        
+        
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         // 全てのモーダルを閉じる
         UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
     
     // キャンセルボタンを押したとき
     @IBAction func cancelCommentButtom(_ sender: Any) {

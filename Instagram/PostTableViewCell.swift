@@ -54,7 +54,7 @@ class PostTableViewCell: UITableViewCell {
         
         // コメント作成者ラベル・コメント記入テキストフィールド追加
         self.commentPICLabel.text = "<\(postData.name!)さんのコメント＞"
-        self.commentLabel.text = postData.comment
+        self.commentLabel.text = postData.comments
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
