@@ -136,11 +136,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @objc func makeComment(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: コメント作成のボタンがタップされました。")
         
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        print("\(String(describing: indexPath))コメントです。")
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
         // CommentViewControllerへの遷移を行う
-        let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment")
-        self.present(commentViewController!, animated: true, completion: nil)
+        let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        commentViewController.X = postData
+        self.present(commentViewController, animated: true, completion: nil)
     }
-    
     
     // セル内のボタンがタップされた時に呼ばれるメソッド
     @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
@@ -150,7 +158,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.tableView)
         let indexPath = tableView.indexPathForRow(at: point)
-        
+//        print("\(indexPath)いいねです。")
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath!.row]
         

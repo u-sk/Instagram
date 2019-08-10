@@ -54,54 +54,43 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NP2-40-wCK">
-                        <rect key="frame" x="30" y="563" width="42" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-sr-E3c">
+                        <rect key="frame" x="30" y="603" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-hA-cQu">
-                        <rect key="frame" x="340" y="563" width="92" height="30"/>
+                        <rect key="frame" x="30" y="563" width="92" height="30"/>
                         <state key="normal" title="コメント作成"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-sr-E3c">
-                        <rect key="frame" x="30" y="603" width="402" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="MEv-hA-cQu" firstAttribute="top" secondItem="RDS-WB-vWa" secondAttribute="bottom" constant="10" id="0kb-eU-8Es"/>
                     <constraint firstItem="aYu-jE-J5q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="14E-2H-q0C"/>
                     <constraint firstItem="v5S-iZ-3S2" firstAttribute="centerY" secondItem="mJN-wW-dzm" secondAttribute="centerY" id="4Gq-ce-Djz"/>
-                    <constraint firstItem="fiU-sr-E3c" firstAttribute="leading" secondItem="RDS-WB-vWa" secondAttribute="leading" id="8eE-vZ-H4Q"/>
+                    <constraint firstItem="MEv-hA-cQu" firstAttribute="leading" secondItem="RDS-WB-vWa" secondAttribute="leading" id="4Yd-hN-hKC"/>
                     <constraint firstItem="O56-RC-WEt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9da-5g-GI5"/>
-                    <constraint firstItem="NP2-40-wCK" firstAttribute="leading" secondItem="RDS-WB-vWa" secondAttribute="leading" id="FaH-cP-Xun"/>
-                    <constraint firstItem="NP2-40-wCK" firstAttribute="leading" secondItem="RDS-WB-vWa" secondAttribute="leading" id="GpI-rj-HfS"/>
+                    <constraint firstItem="fiU-sr-E3c" firstAttribute="leading" secondItem="RDS-WB-vWa" secondAttribute="leading" id="CpI-np-vGa"/>
                     <constraint firstAttribute="trailing" secondItem="aYu-jE-J5q" secondAttribute="trailing" id="HHK-hF-U74"/>
                     <constraint firstItem="RDS-WB-vWa" firstAttribute="top" secondItem="mJN-wW-dzm" secondAttribute="bottom" constant="10" id="Lb8-HN-do5"/>
-                    <constraint firstItem="MEv-hA-cQu" firstAttribute="top" secondItem="NP2-40-wCK" secondAttribute="top" id="LbA-2r-1Wd"/>
                     <constraint firstItem="v5S-iZ-3S2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ML5-xV-siG"/>
-                    <constraint firstItem="NP2-40-wCK" firstAttribute="top" secondItem="RDS-WB-vWa" secondAttribute="bottom" constant="10" id="O8f-9M-FVe"/>
-                    <constraint firstItem="MEv-hA-cQu" firstAttribute="trailing" secondItem="fiU-sr-E3c" secondAttribute="trailing" id="OSn-E2-jWN"/>
                     <constraint firstItem="mJN-wW-dzm" firstAttribute="top" secondItem="aYu-jE-J5q" secondAttribute="bottom" constant="10" id="QgD-JX-kCq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="O56-RC-WEt" secondAttribute="trailing" constant="10" id="WRw-fa-tqm"/>
-                    <constraint firstItem="fiU-sr-E3c" firstAttribute="top" secondItem="MEv-hA-cQu" secondAttribute="bottom" constant="10" id="X4g-4I-0xJ"/>
                     <constraint firstAttribute="trailing" secondItem="RDS-WB-vWa" secondAttribute="trailing" constant="30" id="cvE-8b-G8I"/>
                     <constraint firstItem="RDS-WB-vWa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="e6x-Yy-hjp"/>
+                    <constraint firstItem="fiU-sr-E3c" firstAttribute="top" secondItem="MEv-hA-cQu" secondAttribute="bottom" constant="10" id="j49-fj-WZ9"/>
                     <constraint firstItem="mJN-wW-dzm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mmD-GZ-Rmn"/>
                     <constraint firstItem="aYu-jE-J5q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pE8-ua-Wr1"/>
                     <constraint firstItem="mJN-wW-dzm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="qta-f9-CWb"/>
                     <constraint firstItem="v5S-iZ-3S2" firstAttribute="leading" secondItem="mJN-wW-dzm" secondAttribute="trailing" constant="10" id="rHS-Ox-OIs"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="MEv-hA-cQu" secondAttribute="trailing" constant="10" id="ub5-Bl-ydd"/>
                     <constraint firstItem="O56-RC-WEt" firstAttribute="centerY" secondItem="mJN-wW-dzm" secondAttribute="centerY" id="xa1-VW-bwL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="RDS-WB-vWa" id="KfX-Wy-dRQ"/>
-                <outlet property="commentLabel" destination="fiU-sr-E3c" id="aAs-D2-KV2"/>
-                <outlet property="commentPICLabel" destination="NP2-40-wCK" id="Z1Z-AW-ch0"/>
+                <outlet property="commentLabel" destination="fiU-sr-E3c" id="8NH-9G-gpi"/>
                 <outlet property="dateLabel" destination="O56-RC-WEt" id="3By-o6-iKO"/>
                 <outlet property="likeButton" destination="mJN-wW-dzm" id="VXn-oQ-rvU"/>
                 <outlet property="likeLabel" destination="v5S-iZ-3S2" id="ymN-Ip-Na9"/>

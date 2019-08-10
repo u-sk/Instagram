@@ -16,9 +16,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     
     // コメントした人の名前
-    @IBOutlet weak var commentPICLabel: UILabel!
+//    @IBOutlet weak var commentPICLabel: UILabel!
     
-    // 作成されたコメント
+    // 作成されたコメント    
     @IBOutlet weak var commentLabel: UILabel!
     
     //  コメント作成ボタン
@@ -49,12 +49,14 @@ class PostTableViewCell: UITableViewCell {
         let dateString = formatter.string(from: postData.date!)
         self.dateLabel.text = dateString
         
-        // コメント投稿ボタン追加
-        
-        
-        // コメント作成者ラベル・コメント記入テキストフィールド追加
-        self.commentPICLabel.text = "<\(postData.name!)さんのコメント＞"
-        self.commentLabel.text = postData.comments
+        // 文字サイズを一度0にする(nilの時にLabelが表示されるため)
+        commentLabel.font = UIFont.systemFont(ofSize: 0)
+         // コメント作成者・コメント追加
+        if let poster = postData.poster, let comment = postData.comment {
+             self.commentLabel.text = "\(poster)さんのコメント : \(comment)"
+            // 文字サイズを復活
+            commentLabel.font = UIFont.systemFont(ofSize: 15)
+        }
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")

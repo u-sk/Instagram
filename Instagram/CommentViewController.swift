@@ -11,6 +11,8 @@ import Firebase
 import SVProgressHUD
 
 class CommentViewController: UIViewController {
+
+    var X: PostData!
     
     @IBOutlet weak var editCommentTextField: UITextField!
     
@@ -21,26 +23,26 @@ class CommentViewController: UIViewController {
         // editCommentTextFieldからテキストを取得する
         let comment = editCommentTextField.text
         
-        // 辞書を作成してFirebaseに保存する
-        let postRef = Database.database().reference().child(Const.PostPath)
-        let postCommentDic = ["comments": comment ]
-        postRef.childByAutoId().setValue(postCommentDic)
+        // 投稿者を取得
+        let poster = Auth.auth().currentUser?.displayName
         
-        
-        // HUDで投稿完了を表示する
+        // 辞書を作成してFirebaseに保存する(更新)
+//        let postRef = Database.database().reference().child(Const.PostPath)
+        let postRef = Database.database().reference().child(Const.PostPath).child(X.id!)
+        let postCommentDic = ["comment": comment, "poster": poster!]
+//        postRef.child("PostData.id").updateChildValues(postCommentDic)
+        postRef.updateChildValues(postCommentDic)
+        // HUDで投稿完了を表示するs
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         // 全てのモーダルを閉じる
         UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    
     
     // キャンセルボタンを押したとき
     @IBAction func cancelCommentButtom(_ sender: Any) {
         // 画面を閉じる
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
