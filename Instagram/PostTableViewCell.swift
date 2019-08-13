@@ -57,7 +57,7 @@ class PostTableViewCell: UITableViewCell {
             setComment += "\(poster)さんのコメント: \(comment) \n"
         }
         self.commentLabel.text = setComment
-        print(self.commentLabel.text!)
+        print("\(postData.id!) : \(self.commentLabel.text!)")
         
         
         if postData.isLiked {

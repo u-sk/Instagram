@@ -41,16 +41,6 @@ class CommentViewController: UIViewController {
         print("\(X.comment.count)コメントの要素数")
         print("\(X.poster.count)投稿者の要素数")
         
-//        for setComment in X.comment {
-//            print(setComment)
-//        }
-//        
-//        for setPoster in X.poster {
-//            print(setPoster)
-//        }
-        
-        
-        
         // HUDで投稿完了を表示するs
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         // 全てのモーダルを閉じる
