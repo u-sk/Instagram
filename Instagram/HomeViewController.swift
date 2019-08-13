@@ -143,6 +143,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("\(String(describing: indexPath))コメントです。")
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath!.row]
+        print("\(postData)これです")
         
         // CommentViewControllerへの遷移を行う
         let commentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as! CommentViewController

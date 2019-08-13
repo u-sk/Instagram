@@ -49,14 +49,16 @@ class PostTableViewCell: UITableViewCell {
         let dateString = formatter.string(from: postData.date!)
         self.dateLabel.text = dateString
         
-        // 文字サイズを一度0にする(nilの時にLabelが表示されるため)
-        commentLabel.font = UIFont.systemFont(ofSize: 0)
-         // コメント作成者・コメント追加
-        if let poster = postData.poster, let comment = postData.comment {
-             self.commentLabel.text = "\(poster)さんのコメント : \(comment)"
-            // 文字サイズを復活
-            commentLabel.font = UIFont.systemFont(ofSize: 15)
+        // コメント作成者・コメント追加
+        var setComment: String = ""
+        for index in 0 ..< postData.poster.count {
+            let poster = postData.poster[index]
+            let comment = postData.comment[index]
+            setComment += "\(poster)さんのコメント: \(comment) \n"
         }
+        self.commentLabel.text = setComment
+        print(self.commentLabel.text!)
+        
         
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")

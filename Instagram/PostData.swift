@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class PostData: NSObject {
+class PostData: NSObject {  
     var id: String?
     var image: UIImage?
     var imageString: String?
@@ -17,9 +17,12 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
-    var poster: String?
+//    var poster: String?
+     var poster: [String] = []
     // コメント追加
-    var comment: String?
+//    var comment: String?
+    
+    var comment: [String] = []
     
     init(snapshot: DataSnapshot, myId: String) {
         self.id = snapshot.key
@@ -37,9 +40,17 @@ class PostData: NSObject {
         self.date = Date(timeIntervalSinceReferenceDate: TimeInterval(time!)!)
    
         // 投稿者
-        self.poster = valueDictionary["poster"] as? String
-        // コメント追加
-        self.comment = valueDictionary["comment"] as? String
+        if let poster = valueDictionary["poster"] as? [String] {
+            self.poster = poster
+        }
+        
+//        self.poster = valueDictionary["poster"] as? String
+        // コメント
+        if let comment = valueDictionary["comment"] as? [String] {
+            self.comment = comment
+        }
+        
+//        self.comment= valueDictionary["comment"] as? String
         
         if let likes = valueDictionary["likes"] as? [String] {
             self.likes = likes

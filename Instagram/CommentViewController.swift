@@ -20,18 +20,37 @@ class CommentViewController: UIViewController {
     @IBAction func postCommentButton(_ sender: Any) {
         print(editCommentTextField.text!)
         
-        // editCommentTextFieldからテキストを取得する
-        let comment = editCommentTextField.text
-        
-        // 投稿者を取得
-        let poster = Auth.auth().currentUser?.displayName
+//        // editCommentTextFieldからテキストを取得する
+//        _ = [editCommentTextField.text]
+//
+//        // 投稿者を取得
+//        _ = [Auth.auth().currentUser?.displayName]
         
         // 辞書を作成してFirebaseに保存する(更新)
-//        let postRef = Database.database().reference().child(Const.PostPath)
         let postRef = Database.database().reference().child(Const.PostPath).child(X.id!)
-        let postCommentDic = ["comment": comment, "poster": poster!]
-//        postRef.child("PostData.id").updateChildValues(postCommentDic)
+        // コメントを追加
+        X.comment.append(editCommentTextField.text!)
+        // 投稿者を追加
+        X.poster.append((Auth.auth().currentUser?.displayName)!)
+        // コメントと投稿者が追加された状態で更新
+        let postCommentDic = ["comment": X.comment, "poster": X.poster]
         postRef.updateChildValues(postCommentDic)
+        
+        print(postCommentDic)
+        print("\(postCommentDic.count)postCommentDicの要素数")
+        print("\(X.comment.count)コメントの要素数")
+        print("\(X.poster.count)投稿者の要素数")
+        
+//        for setComment in X.comment {
+//            print(setComment)
+//        }
+//        
+//        for setPoster in X.poster {
+//            print(setPoster)
+//        }
+        
+        
+        
         // HUDで投稿完了を表示するs
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         // 全てのモーダルを閉じる
